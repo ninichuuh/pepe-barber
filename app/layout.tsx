@@ -34,6 +34,7 @@ export const metadata = {
     title: siteConfig.name,
     description: siteConfig.description,
     siteName: siteConfig.name,
+    image: "https://ibb.co/VCnxRL6",
   },
   twitter: {
     card: "summary_large_image",
