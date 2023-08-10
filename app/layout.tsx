@@ -34,13 +34,13 @@ export const metadata = {
     title: siteConfig.name,
     description: siteConfig.description,
     siteName: siteConfig.name,
-    image: "https://ibb.co/VCnxRL6",
+    images: ["https://i.ibb.co/T0j16wy/Screenshot-1.png"],
   },
   twitter: {
     card: "summary_large_image",
     title: siteConfig.name,
     description: siteConfig.description,
-    images: [`https://ibb.co/VCnxRL6`],
+    images: [`https://i.ibb.co/T0j16wy/Screenshot-1.png`],
     creator: "@ninouii",
   },
   icons: {
