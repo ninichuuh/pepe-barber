@@ -8,27 +8,26 @@ import { SiteConfig, ContactConfig } from "@/types"
 const baseUrl = "https://nextlanding.rdev.pro"
 
 export const siteConfig: SiteConfig = {
-  name: "Next Landing",
-  author: "redpangilinan",
-  description:
-    "Easy to setup, customizable, quick, and responsive landing page starter built with Next.js and shadcn/ui.",
+  name: "Pepe's Barbershop",
+  author: "ninouii",
+  description: "Pepe's Barbershop - First pet friendly barbershop in Rijeka",
   keywords: [
-    "Next.js",
-    "React",
-    "Tailwind CSS",
-    "Radix UI",
-    "shadcn/ui",
-    "Landing Page",
-    "Template",
-    "Starter",
+    "Barber",
+    "Barbershop",
+    "Brijanje",
+    "Šišanje",
+    "Muško Šišanje",
+    "Grooming",
+    "Brada",
+    "Pet Friendly",
   ],
   url: {
     base: baseUrl,
-    author: "https://redpangilinan.live",
+    author: "https://github.com/ninichuuh",
   },
   ogImage: `${baseUrl}/og.jpg`,
 }
 
 export const contactConfig: ContactConfig = {
-  email: "janreynald.pangilinan@gmail.com",
+  email: "pepes.barbershop@gmail.com",
 }

@@ -52,9 +52,9 @@ export default function ContactForm() {
           name="subject"
           render={({ field }) => (
             <FormItem>
-              <FormLabel>Subject</FormLabel>
+              <FormLabel>Naslov</FormLabel>
               <FormControl>
-                <Input placeholder="Enter the subject" {...field} />
+                <Input placeholder="Unesite naslov" {...field} />
               </FormControl>
               <FormMessage />
             </FormItem>
@@ -65,12 +65,12 @@ export default function ContactForm() {
           name="msg"
           render={({ field }) => (
             <FormItem>
-              <FormLabel>Message</FormLabel>
+              <FormLabel>Poruka</FormLabel>
               <FormControl>
-                <Textarea placeholder="Enter your message" {...field} />
+                <Textarea placeholder="Upišite vašu poruku" {...field} />
               </FormControl>
               <FormDescription>
-                Your message will be sent through email
+                Vaša poruka biti će proslijeđena na mail
               </FormDescription>
               <FormMessage />
             </FormItem>
@@ -78,7 +78,7 @@ export default function ContactForm() {
         />
         <div />
         <Button className="w-full" type="submit">
-          Submit
+          Pošalji
         </Button>
       </form>
     </Form>

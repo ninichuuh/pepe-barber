@@ -24,8 +24,8 @@ export default function Navbar() {
 
   return (
     <header className="select-none">
-      <nav className="mx-auto justify-between px-4 md:flex md:items-center md:px-8 lg:max-w-7xl">
-        <div>
+      <nav className="mx-auto justify-between px-4 md:flex md:items-center md:px-8  lg:max-w-7xl">
+        <div className=" md:w-1/3">
           <div className="flex items-center justify-between py-3 md:block md:py-5">
             <Link href="/" onClick={handleClick}>
               <h1 className="text-2xl font-bold duration-200 lg:hover:scale-[1.10]">
@@ -72,14 +72,14 @@ export default function Navbar() {
             </div>
           </div>
         </div>
-        <div>
+        <div className="w-1/3">
           <div
             className={`absolute left-0 right-0 z-10 m-auto justify-self-center rounded-md border bg-background p-4 md:static md:mt-0 md:block md:border-none md:p-0 ${
               navbar ? "block" : "hidden"
             }`}
             style={{ width: "100%", maxWidth: "20rem" }}
           >
-            <ul className="flex flex-col items-center space-y-4 text-primary opacity-60 md:flex-row md:space-x-6 md:space-y-0">
+            <ul className="flex flex-col items-center space-y-4 text-xl text-primary opacity-80 md:flex-row md:space-x-6 md:space-y-0">
               {navLinks.map((link) => (
                 <li key={link.route}>
                   <Link
@@ -95,7 +95,7 @@ export default function Navbar() {
           </div>
         </div>
         {settings.themeToggleEnabled && (
-          <div className="hidden md:block">
+          <div className=" hidden w-1/3 justify-end md:flex">
             <ModeToggle />
           </div>
         )}

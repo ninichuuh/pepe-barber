@@ -1,18 +1,18 @@
 export const navLinks = [
   {
-    route: "Home",
+    route: "Početna",
     path: "/",
   },
   {
-    route: "Features",
+    route: "Usluge",
+    path: "/#usluge",
+  },
+  {
+    route: "O nama",
     path: "/#features",
   },
   {
-    route: "Contact",
+    route: "Kontakt",
     path: "/contact",
-  },
-  {
-    route: "Github",
-    path: "https://github.com/redpangilinan/next-shadcn-landing",
   },
 ]

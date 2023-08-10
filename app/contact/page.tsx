@@ -10,7 +10,7 @@ export default function Contact() {
     <main className="container flex flex-col items-center py-8">
       <div className="flex flex-col items-center space-y-2 text-center">
         <HeadingText subtext="Send a message through email">
-          Contact
+          Kontakt
         </HeadingText>
       </div>
       <ContactForm />
