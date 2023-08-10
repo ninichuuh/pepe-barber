@@ -25,7 +25,7 @@ export const siteConfig: SiteConfig = {
     base: baseUrl,
     author: "https://github.com/ninichuuh",
   },
-  ogImage: `${baseUrl}/og.jpg`,
+  ogImage: `https://ibb.co/VCnxRL6`,
 }
 
 export const contactConfig: ContactConfig = {

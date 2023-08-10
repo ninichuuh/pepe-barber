@@ -29,7 +29,7 @@ export const metadata = {
   ],
   openGraph: {
     type: "website",
-    locale: "en_US",
+    locale: "hr_HR",
     url: siteConfig.url.base,
     title: siteConfig.name,
     description: siteConfig.description,
@@ -39,8 +39,8 @@ export const metadata = {
     card: "summary_large_image",
     title: siteConfig.name,
     description: siteConfig.description,
-    images: [`${siteConfig.url.base}/og.jpg`],
-    creator: "@_rdev7",
+    images: [`https://ibb.co/VCnxRL6`],
+    creator: "@ninouii",
   },
   icons: {
     icon: "/favicon.ico",
