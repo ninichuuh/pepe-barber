@@ -54,7 +54,7 @@ export default function HeroHeader() {
             ))}
           </motion.h1>
           <motion.h2
-            className="text-lg font-light text-muted-foreground lg:text-3xl"
+            className="text-lg font-light lg:text-3xl"
             variants={headerVariants}
             initial="hidden"
             animate={isInView ? "visible" : "hidden"}
@@ -79,7 +79,7 @@ export default function HeroHeader() {
               src={heroHeader.image}
               width={500}
               height={500}
-              className="dark:brightness-0 dark:invert-[1]"
+              className="invert dark:brightness-0"
               alt="Header image"
             />
           </motion.div>

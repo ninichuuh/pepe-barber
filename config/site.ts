@@ -20,6 +20,9 @@ export const siteConfig: SiteConfig = {
     "Grooming",
     "Brada",
     "Pet Friendly",
+    "Haircut",
+    "Beard",
+    "Skin Fade",
   ],
   url: {
     base: baseUrl,

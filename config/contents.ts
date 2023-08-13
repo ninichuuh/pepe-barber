@@ -23,12 +23,12 @@ export const featureCards: ContentSection = {
       image: `/masinica.svg`,
     },
     {
-      text: `Brijanje`,
+      text: `Uređivanje brade`,
       subtext: `10€`,
       image: `/brijanje.svg`,
     },
     {
-      text: `Face Fade`,
+      text: `Skin Fade`,
       subtext: `20€`,
       image: `/facefade.svg`,
     },

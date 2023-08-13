@@ -27,6 +27,14 @@ export default function Features() {
       x: 0,
     },
   }
+  const imageVariants = {
+    hidden: { opacity: 0, scale: 0.75 },
+    outOfView: { opacity: 0, scale: 0.75 },
+    visible: {
+      opacity: 1,
+      scale: 1,
+    },
+  }
   return (
     <section
       className="container space-y-8 py-12 lg:py-20"
@@ -48,7 +56,7 @@ export default function Features() {
             ))}
           </motion.h1>
           <motion.h2
-            className="text-lg font-light text-muted-foreground lg:text-3xl"
+            className="text-lg font-light lg:text-3xl"
             variants={headerVariants}
             initial="hidden"
             animate={isInView ? "visible" : "hidden"}
@@ -72,7 +80,7 @@ export default function Features() {
               animate={isInView ? "visible" : "hidden"}
               exit="hidden"
               transition={{ delay: 1 + index * 0.5 }}
-              className="flex flex-grow flex-col items-center justify-between gap-4 p-8 dark:bg-secondary"
+              className="flex flex-grow flex-col items-center justify-between gap-4 rounded-xl p-8 dark:bg-secondary"
             >
               <div
                 key={cards.text}
@@ -80,13 +88,21 @@ export default function Features() {
               >
                 {cards.image !== "" ? (
                   <div className="flex">
-                    <Image
-                      src={cards.image}
-                      className="dark:brightness-0 dark:invert-[1]"
-                      width={100}
-                      height={100}
-                      alt="Card image"
-                    />
+                    <motion.div
+                      variants={imageVariants}
+                      initial="hidden"
+                      animate={isInView ? "visible" : "hidden"}
+                      exit="outOfView"
+                      transition={{ delay: 1.5 + 0.5 * index, duration: 1 }}
+                    >
+                      <Image
+                        src={cards.image}
+                        width={100}
+                        height={100}
+                        alt="Card image"
+                        className="rounded-xl dark:brightness-0 dark:invert-[1]"
+                      />
+                    </motion.div>
                   </div>
                 ) : (
                   <></>
@@ -95,7 +111,7 @@ export default function Features() {
                   <p className="md:text4xl text-2xl font-semibold">
                     {cards.text}
                   </p>
-                  <p className="font-light text-muted-foreground md:text-lg">
+                  <p className="text-justify font-light text-muted-foreground md:text-lg">
                     {cards.subtext}
                   </p>
                 </div>
@@ -104,7 +120,7 @@ export default function Features() {
           ))}
         </div>
         <div
-          className="md:border"
+          className="rounded-lg md:border"
           style={{
             backgroundImage: `url(${features.image})`,
             backgroundRepeat: `no-repeat`,

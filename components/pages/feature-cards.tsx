@@ -3,7 +3,7 @@ import Image from "next/image"
 import { useRef } from "react"
 import { featureCards } from "@/config/contents"
 import { Card, CardDescription, CardTitle } from "@/components/ui/card"
-import { motion, useInView } from "framer-motion"
+import { color, motion, useInView } from "framer-motion"
 
 export default function FeatureCards() {
   const ref = useRef(null)
@@ -29,7 +29,14 @@ export default function FeatureCards() {
       y: 0,
     },
   }
-
+  const imageVariants = {
+    hidden: { opacity: 0, scale: 0.75 },
+    outOfView: { opacity: 0, scale: 0.75 },
+    visible: {
+      opacity: 1,
+      scale: 1,
+    },
+  }
   return (
     <section className="bg-slate-50 dark:bg-slate-900" id="usluge" ref={ref}>
       <div className="container space-y-8 py-12 text-center lg:py-20">
@@ -71,19 +78,32 @@ export default function FeatureCards() {
               initial="hidden"
               animate={isInView ? "visible" : "hidden"}
               exit="hidden"
+              whileHover={{
+                scale: 1.03,
+                transition: { duration: 0.1 },
+              }}
+              whileTap={{ scale: 0.9 }}
               transition={{ delay: index * 0.3 }} // Staggered delay for each card
             >
               <Card className="flex flex-grow flex-col items-center justify-between gap-4 p-8 dark:bg-secondary">
                 {cards.image !== "" ? (
                   <div className="flex items-center justify-center">
                     <div className="flex flex-1">
-                      <Image
-                        src={cards.image}
-                        width={100}
-                        height={100}
-                        alt="Card image"
-                        className="rounded-xl dark:brightness-0 dark:invert-[1]"
-                      />
+                      <motion.div
+                        variants={imageVariants}
+                        initial="hidden"
+                        animate={isInView ? "visible" : "hidden"}
+                        exit="outOfView"
+                        transition={{ delay: 0.5 * index, duration: 1 }}
+                      >
+                        <Image
+                          src={cards.image}
+                          width={100}
+                          height={100}
+                          alt="Card image"
+                          className="rounded-xl dark:brightness-0 dark:invert-[1]"
+                        />
+                      </motion.div>
                     </div>
                   </div>
                 ) : (
