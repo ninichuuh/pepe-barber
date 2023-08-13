@@ -3,6 +3,7 @@ import Image from "next/image"
 import { motion, useInView } from "framer-motion"
 import { heroHeader } from "@/config/contents"
 import { useRef } from "react"
+import AnimatedSVG from "../ui/animatedSVG"
 
 export default function HeroHeader() {
   const ref = useRef(null)
@@ -67,21 +68,16 @@ export default function HeroHeader() {
           </motion.h2>
         </div>
       </div>
+
       {heroHeader.image !== "" ? (
-        <div className="flex flex-1 justify-center lg:justify-end">
+        <div className="w-[600px] flex flex-1 justify-center lg:justify-end">
           <motion.div
             variants={imageVariants}
             initial="hidden"
             animate={isInView ? "visible" : "hidden"}
             exit="outOfView"
           >
-            <Image
-              src={heroHeader.image}
-              width={500}
-              height={500}
-              className="invert dark:brightness-0"
-              alt="Header image"
-            />
+            <AnimatedSVG />
           </motion.div>
         </div>
       ) : (

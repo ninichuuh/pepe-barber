@@ -10,7 +10,7 @@ import { HeroHeader, ContentSection } from "@/types/contents"
 export const heroHeader: HeroHeader = {
   header: `PEPE'S BARBERSHOP`,
   subheader: `Prvi Pet Friendly Barbershop`,
-  image: `/logo.svg`,
+  image: `/logo-min.svg`,
 }
 
 export const featureCards: ContentSection = {
