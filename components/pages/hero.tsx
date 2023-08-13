@@ -70,7 +70,7 @@ export default function HeroHeader() {
       </div>
 
       {heroHeader.image !== "" ? (
-        <div className="mx-auto flex w-full max-w-screen-lg flex-1 justify-center lg:justify-end">
+        <div className="mx-auto flex w-full max-w-screen-lg flex-1 justify-center">
           <motion.div
             variants={imageVariants}
             initial="hidden"
