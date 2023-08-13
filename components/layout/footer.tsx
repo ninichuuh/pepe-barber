@@ -19,6 +19,7 @@ export default function Footer() {
                 alt="instagram"
                 width={32}
                 height={32}
+                className="dark:brightness-0 dark:invert-[1]"
               />
             </Link>
             <Link href="https://www.google.com/maps/place/Slavka+Krautzeka+49a,+51000,+Rijeka/">

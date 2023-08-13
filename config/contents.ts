@@ -53,7 +53,7 @@ export const featureCards: ContentSection = {
 export const features: ContentSection = {
   header: `O nama`,
   subheader: `Upoznajte Rokia i Pepeta`,
-  image: ``,
+  image: `/about.webp`,
   content: [
     {
       text: `Pet Friendly`,

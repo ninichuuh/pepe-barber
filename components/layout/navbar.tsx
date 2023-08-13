@@ -6,10 +6,15 @@ import { ModeToggle } from "@/components/mode-toggle"
 import { siteConfig } from "@/config/site"
 import { navLinks } from "@/lib/links"
 import { settings } from "@/config/settings"
-
+import { motion, useScroll, useSpring } from "framer-motion"
 export default function Navbar() {
   const [navbar, setNavbar] = useState(false)
-
+  const { scrollYProgress } = useScroll()
+  const scaleX = useSpring(scrollYProgress, {
+    stiffness: 100,
+    damping: 30,
+    restDelta: 0.001,
+  })
   const handleClick = async () => {
     setNavbar(false)
   }
@@ -23,7 +28,7 @@ export default function Navbar() {
   }, [navbar])
 
   return (
-    <header className="select-none">
+    <header className="sticky top-0 z-10 select-none bg-white dark:bg-black">
       <nav className="mx-auto justify-between px-4 md:flex md:items-center md:px-8  lg:max-w-7xl">
         <div className=" md:w-1/3">
           <div className="flex items-center justify-between py-3 md:block md:py-5">
@@ -79,7 +84,7 @@ export default function Navbar() {
             }`}
             style={{ width: "100%", maxWidth: "20rem" }}
           >
-            <ul className="flex flex-col items-center space-y-4 text-xl text-primary opacity-80 md:flex-row md:space-x-6 md:space-y-0">
+            <ul className="flex flex-col items-center space-y-4 text-xl text-primary whitespace-nowrap opacity-80 md:flex-row md:space-x-6 md:space-y-0">
               {navLinks.map((link) => (
                 <li key={link.route}>
                   <Link
@@ -100,6 +105,7 @@ export default function Navbar() {
           </div>
         )}
       </nav>
+      <motion.div className="progress-bar" style={{ scaleX }} />
     </header>
   )
 }

@@ -79,6 +79,7 @@ export default function HeroHeader() {
               src={heroHeader.image}
               width={500}
               height={500}
+              className="dark:brightness-0 dark:invert-[1]"
               alt="Header image"
             />
           </motion.div>

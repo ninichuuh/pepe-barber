@@ -82,7 +82,7 @@ export default function FeatureCards() {
                         width={100}
                         height={100}
                         alt="Card image"
-                        className="rounded-xl"
+                        className="rounded-xl dark:brightness-0 dark:invert-[1]"
                       />
                     </div>
                   </div>
