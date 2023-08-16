@@ -1,4 +1,5 @@
 "use client"
+import Link from "next/link"
 import Image from "next/image"
 import { motion, useInView } from "framer-motion"
 import { heroHeader } from "@/config/contents"
@@ -67,6 +68,16 @@ export default function HeroHeader() {
             ))}
           </motion.h2>
         </div>
+        <Link
+          href="tel:+1234567890"
+          target="_blank"
+          className={
+            "flex flex-row flex-nowrap gap-2 rounded border border-popover-foreground bg-primary px-4 py-2 font-bold text-white hover:bg-green-900 dark:border-yellow-600 dark:bg-btnbg dark:hover:bg-yellow-600"
+          }
+        >
+          <Image width={18} height={20} src={"../phone.svg"} alt={"blabla"} />
+          <span> Rezerviraj termin</span>
+        </Link>
       </div>
 
       {heroHeader.image !== "" ? (
