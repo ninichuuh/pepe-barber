@@ -80,9 +80,9 @@ export default function FeatureCards() {
               exit="hidden"
               whileHover={{
                 scale: 1.03,
-                transition: { duration: 0.1 },
+                transition: { delay: 0.1, duration: 0.1 },
               }}
-              whileTap={{ scale: 0.9 }}
+              whileTap={{ scale: 0.5, transition: { delay: 0, duration: 0.5 } }}
               transition={{ delay: index * 0.3 }} // Staggered delay for each card
             >
               <Card className="flex flex-grow flex-col items-center justify-between gap-4 p-8 dark:bg-secondary">

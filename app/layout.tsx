@@ -1,12 +1,14 @@
 import "./globals.css"
 import { siteConfig } from "@/config/site"
-import { Dosis } from "next/font/google"
+// import { Dosis } from "next/font/google"
+import { Amatic_SC } from "next/font/google"
 import Navbar from "@/components/layout/navbar"
 import Footer from "@/components/layout/footer"
 import { ThemeProvider } from "@/components/theme-provider"
 import { settings } from "@/config/settings"
 
-const dosis = Dosis({ subsets: ["latin"] })
+// const dosis = Dosis({ subsets: ["latin"] })
+const amantic = Amatic_SC({ subsets: ["latin"], weight: "400" })
 
 export const metadata = {
   metadataBase: new URL(siteConfig.url.base),
@@ -56,7 +58,7 @@ export default function RootLayout({ children }: RootLayoutProps) {
   return (
     <html lang="en" suppressHydrationWarning>
       <body
-        className={`${dosis.className} flex min-h-screen flex-col bg-background text-primary`}
+        className={`${amantic.className} flex min-h-screen flex-col bg-background text-primary`}
       >
         {settings.themeToggleEnabled ? (
           <ThemeProvider attribute="class" defaultTheme="system" enableSystem>

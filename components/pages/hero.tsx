@@ -87,6 +87,7 @@ export default function HeroHeader() {
             initial="hidden"
             animate={isInView ? "visible" : "hidden"}
             exit="outOfView"
+            className="w-100 h-full flex content-center"
           >
             <AnimatedSVG />
           </motion.div>

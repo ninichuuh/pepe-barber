@@ -8,9 +8,10 @@ import { SiteConfig, ContactConfig } from "@/types"
 const baseUrl = "https://nextlanding.rdev.pro"
 
 export const siteConfig: SiteConfig = {
-  name: "Pepe's Barbershop",
+  name: "Barba Pepe's Barbershop",
   author: "ninouii",
-  description: "Pepe's Barbershop - First pet friendly barbershop in Rijeka",
+  description:
+    "Barba Pepe's Barbershop - First pet friendly barbershop in Rijeka",
   keywords: [
     "Barber",
     "Barbershop",
