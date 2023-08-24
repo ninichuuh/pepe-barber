@@ -38,10 +38,10 @@ export default function HeroHeader() {
   }
   return (
     <section
-      className="container flex h-[95dvh] flex-col gap-32 pb-12 pt-16  text-center md:pt-4 lg:items-center lg:gap-8 lg:py-20"
+      className="container flex h-[95dvh] flex-col pb-12 pt-16 text-center  md:gap-16 md:pt-4 lg:items-center lg:gap-8 lg:py-20"
       ref={ref}
     >
-      <div className="flex flex-col items-center gap-4 text-center md:flex-1 lg:gap-8">
+      <div className="flex flex-col items-center justify-center gap-4 text-center md:flex-1 lg:gap-8">
         <div className="space-y-4">
           <motion.h1
             className="text-4xl font-bold lg:text-6xl"
@@ -75,19 +75,25 @@ export default function HeroHeader() {
             "flex flex-row flex-nowrap gap-2 rounded border border-popover-foreground bg-primary px-4 py-2 font-bold text-white hover:bg-green-900 dark:border-yellow-600 dark:bg-btnbg dark:hover:bg-yellow-600"
           }
         >
-          <Image width={18} height={20} src={"../phone.svg"} alt={"blabla"} />
+          <Image
+            width={18}
+            priority={true}
+            height={20}
+            src={"../phone.svg"}
+            alt={"blabla"}
+          />
           <span> Rezerviraj termin</span>
         </Link>
       </div>
 
       {heroHeader.image !== "" ? (
-        <div className="mx-auto flex w-full max-w-screen-lg flex-1 justify-center">
+        <div className=" flex h-full w-full flex-1 justify-center md:max-h-[65dvh]">
           <motion.div
             variants={imageVariants}
             initial="hidden"
             animate={isInView ? "visible" : "hidden"}
             exit="outOfView"
-            className="w-100 h-full flex content-center"
+            className="flex h-full w-full content-center"
           >
             <AnimatedSVG />
           </motion.div>
