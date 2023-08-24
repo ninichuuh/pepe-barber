@@ -42,7 +42,7 @@ export default function Footer() {
           </ul>
         </div>
         <hr className="my-6 text-muted-foreground sm:mx-auto lg:my-8" />
-        <span className="block text-sm text-muted-foreground sm:text-center">
+        <span className="block text-sm text-muted-foreground dark:text-white sm:text-center">
           © {new Date().getFullYear()}{" "}
           <a
             target="_blank"
