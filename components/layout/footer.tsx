@@ -12,7 +12,7 @@ export default function Footer() {
               {siteConfig.name}
             </h1>
           </Link>
-          <ul className="flex w-1/3 flex-row justify-center gap-4">
+          <div className="flex w-1/3 flex-row justify-center gap-4">
             <Link href="https://www.instagram.com/_barbapepe_/">
               <Image
                 src="/instagram.svg"
@@ -30,8 +30,8 @@ export default function Footer() {
                 height={32}
               />
             </Link>
-          </ul>
-          <ul className="mb-6 flex flex-nowrap items-center text-primary opacity-60 sm:mb-0 sm:w-1/3">
+          </div>
+          <ul className="mb-6 flex flex-nowrap items-center text-primary  sm:mb-0 sm:w-1/3">
             {navLinks.map((link) => (
               <li key={link.route}>
                 <Link href={link.path} className="mr-4 hover:underline md:mr-6">
