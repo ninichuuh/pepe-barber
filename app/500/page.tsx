@@ -4,7 +4,7 @@ export const metadata = {
   title: "500",
 }
 
-export default function Contact() {
+export default function Custom500() {
   return (
     <main className="container flex h-full flex-col items-center py-8">
       <div className="flex h-[60dvh] flex-col items-center justify-center space-y-2 text-center">

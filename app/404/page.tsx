@@ -4,10 +4,10 @@ export const metadata = {
   title: "404",
 }
 
-export default function Contact() {
+export default function Custom404() {
   return (
-    <main className="container flex h-full flex-col justify-center items-center py-8">
-      <div className="flex h-[60dvh] flex-col justify-center items-center space-y-2 text-center">
+    <main className="container flex h-full flex-col items-center justify-center py-8">
+      <div className="flex h-[60dvh] flex-col items-center justify-center space-y-2 text-center">
         <HeadingText subtext="Stranica nije pronađena">404</HeadingText>
         <Link
           href="/"
