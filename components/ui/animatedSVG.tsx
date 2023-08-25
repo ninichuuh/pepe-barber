@@ -4,7 +4,7 @@ const AnimatedSVG = () => {
   const [isHovered, setHovered] = useState(false)
   return (
     <div
-      className="h-full w-full"
+      className="h-full w-full overflow-visible"
       onMouseEnter={() => setHovered(true)}
       onMouseLeave={() => setHovered(false)}
     >
