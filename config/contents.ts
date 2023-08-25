@@ -67,7 +67,7 @@ export const features: ContentSection = {
     },
     {
       text: `Suradnja S Azilom`,
-      subtext: `Unutar našeg barbershopa s ponosom ističemo oglasnu ploču koja prikazuje fotografije i informacije o raznim psima u potrazi za toplim, ljubavlju ispunjenim domovima. Odabirom udomljavanja, "Pepe's Barbershop" vas nagrađuje posebnim iznenađenjem - besplatnim tretmanom koji uključuje šišanje i pranje kose, dotjerivanje brade te osvježavajući tretman lica.`,
+      subtext: `Unutar našeg barbershopa s ponosom ističemo oglasnu ploču koja prikazuje fotografije i informacije o raznim psima u potrazi za toplim, ljubavlju ispunjenim domovima. Odabirom udomljavanja, "Pepe's Barbershop" vas nagrađuje posebnim iznenađenjem-besplatnim tretmanom koji uključuje šišanje i pranje kose, dotjerivanje brade te osvježavajući tretman lica.`,
       image: `/pet-house.svg`,
     },
   ],

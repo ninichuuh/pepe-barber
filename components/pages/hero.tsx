@@ -56,7 +56,7 @@ export default function HeroHeader() {
             ))}
           </motion.h1>
           <motion.h2
-            className="text-lg font-light lg:text-3xl"
+            className="text-xl font-light lg:text-3xl"
             variants={headerVariants}
             initial="hidden"
             animate={isInView ? "visible" : "hidden"}
@@ -72,7 +72,7 @@ export default function HeroHeader() {
           href="tel:+1234567890"
           target="_blank"
           className={
-            "flex flex-row flex-nowrap gap-2 rounded border border-popover-foreground bg-primary px-4 py-2 font-bold text-white hover:bg-green-900 dark:border-yellow-600 dark:bg-btnbg dark:hover:bg-yellow-600"
+            "flex flex-row flex-nowrap gap-2 rounded border border-popover-foreground bg-primary px-4 py-2 font-bold text-white hover:bg-green-900 dark:border-yellow-600 dark:bg-btnbg dark:text-[#693434] dark:hover:bg-yellow-600"
           }
         >
           <Image

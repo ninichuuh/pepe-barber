@@ -58,6 +58,7 @@ export default function RootLayout({ children }: RootLayoutProps) {
   return (
     <html lang="en" suppressHydrationWarning>
       <body
+        font-display="swap"
         className={`${amantic.className} flex min-h-screen flex-col bg-background text-primary`}
       >
         {settings.themeToggleEnabled ? (

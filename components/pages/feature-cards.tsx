@@ -27,6 +27,7 @@ export default function FeatureCards() {
     visible: {
       opacity: 1,
       y: 0,
+      transition: { stagger: 0.2 },
     },
   }
   const imageVariants = {
@@ -78,12 +79,15 @@ export default function FeatureCards() {
               initial="hidden"
               animate={isInView ? "visible" : "hidden"}
               exit="hidden"
+              // Staggered delay for each card
               whileHover={{
                 scale: 1.03,
                 transition: { delay: 0.1, duration: 0.1 },
               }}
-              whileTap={{ scale: 0.5, transition: { delay: 0, duration: 0.5 } }}
-              transition={{ delay: index * 0.3 }} // Staggered delay for each card
+              whileTap={{
+                scale: 0.7,
+                transition: { delay: 0.1, duration: 0.3 },
+              }}
             >
               <Card className="flex flex-grow flex-col items-center justify-between gap-4 p-8 dark:bg-secondary">
                 {cards.image !== "" ? (
@@ -109,10 +113,17 @@ export default function FeatureCards() {
                 ) : (
                   <></>
                 )}
-                <div className="space-y-2">
+                <motion.div
+                  variants={imageVariants}
+                  initial="hidden"
+                  animate={isInView ? "visible" : "hidden"}
+                  exit="outOfView"
+                  transition={{ delay: 0.5 * index, duration: 1 }}
+                  className="space-y-2"
+                >
                   <CardTitle>{cards.text}</CardTitle>
                   <CardDescription>{cards.subtext}</CardDescription>
-                </div>
+                </motion.div>
               </Card>
             </motion.div>
           ))}
