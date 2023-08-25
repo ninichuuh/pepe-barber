@@ -76,9 +76,10 @@ export default function HeroHeader() {
           }
         >
           <Image
-            width={18}
+            style={{ width: "20px", height: "auto" }}
             priority={true}
-            height={20}
+            width={0}
+            height={0}
             src={"../phone.svg"}
             alt={"blabla"}
           />

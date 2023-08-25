@@ -119,14 +119,16 @@ export default function Features() {
             </motion.div>
           ))}
         </div>
-        <div
-          className="rounded-lg md:border"
-          style={{
-            backgroundImage: `url(${features.image})`,
-            backgroundRepeat: `no-repeat`,
-            backgroundSize: `cover`,
-          }}
-        ></div>
+        <div className="rounded-lg md:border">
+          <Image
+            src={features.image}
+            alt="picture"
+            width={0}
+            height={0}
+            sizes="100vw"
+            style={{ width: "100%", height: "auto" }}
+          />
+        </div>
       </div>
     </section>
   )
