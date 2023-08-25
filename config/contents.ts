@@ -16,6 +16,7 @@ export const heroHeader: HeroHeader = {
 export const featureCards: ContentSection = {
   header: `Usluge`,
   subheader: ``,
+  image: ``,
   content: [
     {
       text: `Šišanje`,
