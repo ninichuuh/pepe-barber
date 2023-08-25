@@ -5,13 +5,12 @@ import { SiteConfig, ContactConfig } from "@/types"
 -- Fill the details about your website
  ==================== */
 
-const baseUrl = "https://nextlanding.rdev.pro"
+const baseUrl = "https://pepe-barbershop.vercel.app/"
 
 export const siteConfig: SiteConfig = {
   name: "Pepe's Barbershop",
   author: "ninouii",
-  description:
-    "Pepe's Barbershop - First pet friendly barbershop in Rijeka",
+  description: "Pepe's Barbershop - First pet friendly barbershop in Rijeka",
   keywords: [
     "Barber",
     "Barbershop",

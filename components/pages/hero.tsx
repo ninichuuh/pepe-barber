@@ -86,21 +86,17 @@ export default function HeroHeader() {
         </Link>
       </div>
 
-      {heroHeader.image !== "" ? (
-        <div className=" flex h-full w-full flex-1 justify-center md:max-h-[65dvh]">
-          <motion.div
-            variants={imageVariants}
-            initial="hidden"
-            animate={isInView ? "visible" : "hidden"}
-            exit="outOfView"
-            className="flex h-full w-full content-center"
-          >
-            <AnimatedSVG />
-          </motion.div>
-        </div>
-      ) : (
-        <></>
-      )}
+      <div className=" flex h-full w-full flex-1 justify-center md:max-h-[65dvh]">
+        <motion.div
+          variants={imageVariants}
+          initial="hidden"
+          animate={isInView ? "visible" : "hidden"}
+          exit="outOfView"
+          className="flex h-full w-full content-center"
+        >
+          <AnimatedSVG />
+        </motion.div>
+      </div>
     </section>
   )
 }
