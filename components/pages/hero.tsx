@@ -38,7 +38,7 @@ export default function HeroHeader() {
   }
   return (
     <section
-      className="container flex h-[95dvh] flex-col pb-12 pt-16 text-center  md:gap-16 md:pt-4 lg:items-center lg:gap-8 lg:py-20"
+      className="container flex h-[95dvh] flex-col pb-12 pt-16 overflow-visible text-center  md:gap-16 md:pt-4 lg:items-center lg:gap-8 lg:py-20"
       ref={ref}
     >
       <div className="flex flex-col items-center justify-center gap-4 text-center md:flex-1 lg:gap-8">
