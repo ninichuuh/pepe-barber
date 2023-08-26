@@ -41,7 +41,7 @@ export default function HeroHeader() {
       className="container flex h-[95dvh] flex-col overflow-visible pb-12 pt-16 text-center  md:gap-16 md:pt-4 lg:items-center lg:gap-8 lg:py-20"
       ref={ref}
     >
-      <div className="flex flex-col items-center justify-center gap-4 text-center md:flex-1 lg:gap-8">
+      <div className="flex flex-col items-center justify-center gap-4 overflow-visible text-center md:flex-1 lg:gap-8">
         <div className="space-y-4">
           <motion.h1
             className="text-4xl font-bold lg:text-6xl"
@@ -87,13 +87,13 @@ export default function HeroHeader() {
         </Link>
       </div>
 
-      <div className=" flex h-full w-full flex-1 justify-center md:max-h-[65dvh]">
+      <div className=" flex h-full w-full flex-1 justify-center overflow-visible md:max-h-[65dvh]">
         <motion.div
           variants={imageVariants}
           initial="hidden"
           animate={isInView ? "visible" : "hidden"}
           exit="outOfView"
-          className="flex h-full w-full content-center"
+          className="flex h-full w-full content-center overflow-visible"
         >
           <AnimatedSVG />
         </motion.div>
