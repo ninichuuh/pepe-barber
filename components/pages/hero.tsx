@@ -5,6 +5,7 @@ import { motion, useInView } from "framer-motion"
 import { heroHeader } from "@/config/contents"
 import { useRef } from "react"
 import AnimatedSVG from "../ui/animatedSVG"
+import phoneSVG from "../../public/phone.svg"
 
 export default function HeroHeader() {
   const ref = useRef(null)
@@ -80,7 +81,7 @@ export default function HeroHeader() {
             priority={true}
             width={0}
             height={0}
-            src={"../phone.svg"}
+            src={phoneSVG}
             alt={"blabla"}
           />
           <span> Rezerviraj termin</span>

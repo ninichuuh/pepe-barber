@@ -3,7 +3,7 @@ import Image from "next/image"
 import { useRef } from "react"
 import { featureCards } from "@/config/contents"
 import { Card, CardDescription, CardTitle } from "@/components/ui/card"
-import { color, motion, useInView } from "framer-motion"
+import { motion, useInView } from "framer-motion"
 
 export default function FeatureCards() {
   const ref = useRef(null)
