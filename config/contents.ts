@@ -45,7 +45,7 @@ export const featureCards: ContentSection = {
     },
     {
       text: `Pranje & Stiliziranje Kose`,
-      subtext: `3€`,
+      subtext: `5€`,
       image: `/gel.svg`,
     },
   ],
