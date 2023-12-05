@@ -4,7 +4,7 @@ import { featureCards } from "@/config/contents"
 import { Content } from "@/types/contents"
 import { motion, useAnimation, useInView } from "framer-motion"
 import Image from "next/image"
-import { useRef, useState } from "react"
+import { useRef,useState } from "react"
 
 export default function FeatureCards() {
   const ref = useRef(null)
@@ -13,7 +13,6 @@ export default function FeatureCards() {
     { length: featureCards.content.length },
     () => useAnimation()
   )
-
   const [cardsArray, setCardsArray] = useState(featureCards)
   function shuffleArray(array: Content[]) {
     for (let i = array.length - 1; i > 0; i--) {
@@ -52,32 +51,32 @@ export default function FeatureCards() {
       scale: 1,
     },
   }
-  const handleTap = async () => {
-    await Promise.all(
-      controlsArray.map(async (controls, index) => {
-        if (controls) {
-          await controls.start({
-            scale: 0.75,
-            transition: { duration: 0.25 },
-          })
-        }
-      })
-    )
-    console.log(cardsArray.content)
-    const suffledArray = shuffleArray([...cardsArray.content]) // Create a new array and shuffle it
-    setCardsArray({ ...cardsArray, content: suffledArray }) // Set the state with the new array
-    console.log(cardsArray.content)
-    await Promise.all(
-      controlsArray.map(async (controls, index) => {
-        if (controls) {
-          await controls.start({
-            scale: 1,
-            transition: { duration: 0.25 },
-          })
-        }
-      })
-    )
-  }
+const handleTap = async () => {
+ await Promise.all(
+   controlsArray.map(async (controls, index) => {
+     if (controls) {
+       await controls.start({
+         scale: 0.75,
+         transition: { duration: 0.25 },
+       })
+     }
+   })
+ )
+ console.log(cardsArray.content)
+ const suffledArray = shuffleArray([...cardsArray.content]) // Create a new array and shuffle it
+ setCardsArray({...cardsArray, content: suffledArray}) // Set the state with the new array
+ console.log(cardsArray.content)
+ await Promise.all(
+   controlsArray.map(async (controls, index) => {
+     if (controls) {
+       await controls.start({
+         scale: 1,
+         transition: { duration: 0.25 },
+       })
+     }
+   })
+ )
+}
 
   return (
     <section className="bg-slate-50 dark:bg-black" id="usluge" ref={ref}>
