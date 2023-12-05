@@ -13,6 +13,6 @@ export const navLinks = [
   },
   {
     route: "Kontakt",
-    path: "/contact",
+    path: "/#contact",
   },
 ]

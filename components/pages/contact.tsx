@@ -8,9 +8,9 @@ export const metadata = {
 
 export default function Contact() {
   return (
-    <main className="container flex flex-col items-center py-8">
+    <section id="contact" className="container flex flex-col items-center py-8">
       <div className="flex flex-col items-center gap-8 space-y-2 text-center">
-        <HeadingText subtext="Kako do nas?">Kontakt</HeadingText>
+        <HeadingText>Kako do nas?</HeadingText>
         <div className="flex h-full w-full flex-col gap-8">
           <div className="flex flex-col-reverse items-center justify-around gap-4 md:flex-row">
             {/* Instagram shortcut */}
@@ -57,6 +57,6 @@ export default function Contact() {
           ></iframe>
         </div>
       </div>
-    </main>
+    </section>
   )
 }

@@ -40,12 +40,12 @@ export const featureCards: ContentSection = {
     },
     {
       text: `Depiliranje Uši i Nosa`,
-      subtext: `10€`,
+      subtext: `5€`,
       image: `/depiliranje.svg`,
     },
     {
       text: `Pranje & Stiliziranje Kose`,
-      subtext: `5€`,
+      subtext: `3€`,
       image: `/gel.svg`,
     },
   ],
