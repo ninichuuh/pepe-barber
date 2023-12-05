@@ -1,3 +1,4 @@
+"use client"
 import HeadingText from "@/components/heading-text"
 import Image from "next/image"
 import Link from "next/link"
@@ -50,6 +51,7 @@ export default function Contact() {
           </div>
           <iframe
             className=""
+            title="map"
             src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d26675.244744185613!2d14.4989405008873!3d45.351038566396774!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x4764a1d6fbfac897%3A0xcf6b9a30e6547ebc!2sPepe&#39;s%20Barbershop!5e0!3m2!1shr!2shr!4v1701794274042!5m2!1shr!2shr"
             width="auto"
             height="400"

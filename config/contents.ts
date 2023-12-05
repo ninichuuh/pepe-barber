@@ -54,7 +54,7 @@ export const featureCards: ContentSection = {
 export const features: ContentSection = {
   header: `O nama`,
   subheader: `Upoznajte Rokia i Pepeta`,
-  image: `/naslovna.jpg`,
+  image: `/naslovna.webp`,
   content: [
     {
       text: `Pet Friendly`,
