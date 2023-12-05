@@ -15,9 +15,7 @@ export default function HeadingText({
         {children}
       </h1>
       {subtext && (
-        <h2 className="font-light text-muted-foreground lg:text-lg">
-          {subtext}
-        </h2>
+        <h2 className="font-light text-foreground lg:text-lg">{subtext}</h2>
       )}
     </div>
   )

@@ -108,7 +108,7 @@ export default function Features() {
                   <></>
                 )}
                 <div className="flex-1">
-                  <p className="md:text4xl text-2xl font-semibold">
+                  <p className="md:text4xl text-2xl font-semibold text-card-foreground">
                     {cards.text}
                   </p>
                   <p className="text-justify font-light text-muted-foreground md:text-lg">
@@ -119,14 +119,14 @@ export default function Features() {
             </motion.div>
           ))}
         </div>
-        <div className="rounded-lg md:border">
+        <div className=" relative rounded-lg md:border">
           <Image
+            className="rounded-lg"
             src={features.image}
             alt="picture"
-            width={0}
-            height={0}
-            sizes="100vw"
-            style={{ width: "100%", height: "auto" }}
+            layout="fill"
+            objectFit="cover"
+            objectPosition="100% center"
           />
         </div>
       </div>

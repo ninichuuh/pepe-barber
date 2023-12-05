@@ -1,14 +1,15 @@
 import "./globals.css"
 import { siteConfig } from "@/config/site"
 // import { Dosis } from "next/font/google"
-import { Lato } from "next/font/google"
+// import { Lato } from "next/font/google"
+import { Alexandria } from "next/font/google"
 import Navbar from "@/components/layout/navbar"
 import Footer from "@/components/layout/footer"
 import { ThemeProvider } from "@/components/theme-provider"
 import { settings } from "@/config/settings"
 
 // const dosis = Dosis({ subsets: ["latin"] })
-const amantic = Lato({ subsets: ["latin"], weight: "400" })
+const amantic = Alexandria({ subsets: ["latin"], weight: "400" })
 
 export const metadata = {
   metadataBase: new URL(siteConfig.url.base),

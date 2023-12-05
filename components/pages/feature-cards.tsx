@@ -1,13 +1,26 @@
 "use client"
-import Image from "next/image"
-import { useRef } from "react"
-import { featureCards } from "@/config/contents"
 import { Card, CardDescription, CardTitle } from "@/components/ui/card"
-import { motion, useInView } from "framer-motion"
+import { featureCards } from "@/config/contents"
+import { Content } from "@/types/contents"
+import { motion, useAnimation, useInView } from "framer-motion"
+import Image from "next/image"
+import { useRef, useState } from "react"
 
 export default function FeatureCards() {
   const ref = useRef(null)
   const isInView = useInView(ref)
+  const controlsArray = Array.from(
+    { length: featureCards.content.length },
+    () => useAnimation()
+  )
+  const [cardsArray, setCardsArray] = useState(featureCards)
+  function shuffleArray(array: Content[]) {
+    for (let i = array.length - 1; i > 0; i--) {
+      const j = Math.floor(Math.random() * (i + 1))
+      ;[array[i], array[j]] = [array[j], array[i]]
+    }
+    return array
+  }
   const headerVariants = {
     hidden: { opacity: 0 },
     visible: {
@@ -38,10 +51,37 @@ export default function FeatureCards() {
       scale: 1,
     },
   }
+  const handleTap = async () => {
+    await Promise.all(
+      controlsArray.map(async (controls, index) => {
+        if (controls) {
+          await controls.start({
+            scale: 0.75,
+            transition: { duration: 0.25 },
+          })
+        }
+      })
+    )
+    console.log(cardsArray.content)
+    const suffledArray = shuffleArray([...cardsArray.content]) // Create a new array and shuffle it
+    setCardsArray({ ...cardsArray, content: suffledArray }) // Set the state with the new array
+    console.log(cardsArray.content)
+    await Promise.all(
+      controlsArray.map(async (controls, index) => {
+        if (controls) {
+          await controls.start({
+            scale: 1,
+            transition: { duration: 0.25 },
+          })
+        }
+      })
+    )
+  }
+
   return (
     <section className="bg-slate-50 dark:bg-black" id="usluge" ref={ref}>
       <div className="container space-y-8 py-12 text-center lg:py-20">
-        {featureCards.header || featureCards.subheader ? (
+        {cardsArray.header || cardsArray.subheader ? (
           <div className="space-y-2">
             <motion.h1
               className="text-4xl font-bold lg:text-6xl"
@@ -49,7 +89,7 @@ export default function FeatureCards() {
               initial="hidden"
               animate={isInView ? "visible" : "hidden"}
             >
-              {featureCards.header.split("").map((letter, index) => (
+              {cardsArray.header.split("").map((letter, index) => (
                 <motion.span key={index} variants={letterVariants}>
                   {letter}
                 </motion.span>
@@ -62,7 +102,7 @@ export default function FeatureCards() {
               animate={isInView ? "visible" : "hidden"}
               exit="hidden"
             >
-              {featureCards.subheader.split("").map((letter, index) => (
+              {cardsArray.subheader.split("").map((letter, index) => (
                 <motion.span key={index} variants={letterVariants}>
                   {letter}
                 </motion.span>
@@ -72,24 +112,20 @@ export default function FeatureCards() {
         ) : null}
 
         <div className="grid grid-cols-1 gap-4 md:grid-cols-3">
-          {featureCards.content.map((cards, index) => (
+          {cardsArray.content.map((cards, index) => (
             <motion.div
-              key={cards.text}
+              key={cards.image}
               variants={cardVariants}
-              initial="hidden"
-              animate={isInView ? "visible" : "hidden"}
+              initial="visible"
+              animate={controlsArray[index]}
               exit="hidden"
-              // Staggered delay for each card
+              onTap={handleTap}
               whileHover={{
                 scale: 1.03,
                 transition: { delay: 0.1, duration: 0.1 },
               }}
-              whileTap={{
-                scale: 0.7,
-                transition: { delay: 0.1, duration: 0.3 },
-              }}
             >
-              <Card className="flex flex-grow flex-col items-center justify-between gap-4 p-8 dark:bg-secondary">
+              <Card className="flex flex-grow cursor-pointer flex-col items-center justify-between gap-4 p-8 dark:bg-secondary">
                 {cards.image !== "" ? (
                   <div className="flex items-center justify-center">
                     <div className="flex flex-1">

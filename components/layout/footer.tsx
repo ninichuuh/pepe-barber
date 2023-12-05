@@ -13,7 +13,10 @@ export default function Footer() {
             </h1>
           </Link>
           <div className="flex w-1/3 flex-row justify-center gap-4">
-            <Link href="https://www.instagram.com/_barbapepe_/">
+            <Link
+              target="_blank"
+              href="https://www.instagram.com/_pepesbarbershop_/"
+            >
               <Image
                 src="/instagram.svg"
                 alt="instagram"
@@ -22,7 +25,10 @@ export default function Footer() {
                 className="dark:brightness-0 dark:invert-[1]"
               />
             </Link>
-            <Link href="https://www.google.com/maps/place/Slavka+Krautzeka+49a,+51000,+Rijeka/">
+            <Link
+              target="_blank"
+              href="https://maps.app.goo.gl/BGBAPx1NiFxttQ5c9"
+            >
               <Image
                 src="/googlemaps.svg"
                 alt="googlemaps"
@@ -31,7 +37,7 @@ export default function Footer() {
               />
             </Link>
           </div>
-          <ul className="mb-6 flex flex-nowrap items-center text-primary  sm:mb-0 sm:w-1/3">
+          <ul className="mb-6 flex flex-nowrap items-center whitespace-nowrap text-primary  sm:mb-0 sm:w-1/3">
             {navLinks.map((link) => (
               <li key={link.route}>
                 <Link href={link.path} className="mr-4 hover:underline md:mr-6">

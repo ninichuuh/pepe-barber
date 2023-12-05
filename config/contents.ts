@@ -39,13 +39,13 @@ export const featureCards: ContentSection = {
       image: `/scissors.svg`,
     },
     {
-      text: `Depiliranje Voskom`,
+      text: `Depiliranje Uši i Nosa`,
       subtext: `10€`,
       image: `/depiliranje.svg`,
     },
     {
       text: `Pranje & Stiliziranje Kose`,
-      subtext: `8€`,
+      subtext: `3€`,
       image: `/gel.svg`,
     },
   ],
@@ -54,7 +54,7 @@ export const featureCards: ContentSection = {
 export const features: ContentSection = {
   header: `O nama`,
   subheader: `Upoznajte Rokia i Pepeta`,
-  image: `/about.webp`,
+  image: `/naslovna.jpg`,
   content: [
     {
       text: `Pet Friendly`,

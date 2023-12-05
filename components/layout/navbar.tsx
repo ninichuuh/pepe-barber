@@ -1,10 +1,10 @@
 "use client"
 
-import { useState, useEffect } from "react"
-import Link from "next/link"
 import { ModeToggle } from "@/components/mode-toggle"
-import { siteConfig } from "@/config/site"
 import { navLinks } from "@/lib/links"
+import Link from "next/link"
+import { useEffect, useState } from "react"
+import Image from "next/image"
 import { settings } from "@/config/settings"
 import { motion, useScroll, useSpring } from "framer-motion"
 export default function Navbar() {
@@ -28,14 +28,18 @@ export default function Navbar() {
   }, [navbar])
 
   return (
-    <header className="sticky top-0 z-10 select-none bg-white dark:bg-[#003e1f]">
-      <nav className="mx-auto justify-between px-4 md:flex md:items-center md:px-8  lg:max-w-7xl">
-        <div className=" md:w-1/3">
-          <div className="flex items-center justify-between py-3 md:block md:py-5">
+    <header className="sticky top-0 z-10 select-none bg-white pt-3 dark:bg-[#003e1f]">
+      <nav className="w-full justify-around px-4 md:flex md:items-center md:px-4 ">
+        <div className="pb-1">
+          <div className="flex items-center justify-between p-1  md:block ">
             <Link href="/" onClick={handleClick}>
-              <h1 className="text-2xl font-bold duration-200 lg:hover:scale-[1.10]">
-                {siteConfig.name}
-              </h1>
+              <Image
+                src="/logo2.svg"
+                alt="logo"
+                width={64}
+                height={64}
+                className="dark:brightness-0 dark:invert-[1]"
+              />
             </Link>
             <div className="flex gap-1 md:hidden">
               <button
@@ -77,14 +81,13 @@ export default function Navbar() {
             </div>
           </div>
         </div>
-        <div className="w-1/3">
+        <div className="">
           <div
             className={`absolute left-0 right-0 z-10 m-auto justify-self-center rounded-md border bg-background p-4 md:static md:mt-0 md:block md:border-none md:p-0 ${
               navbar ? "block" : "hidden"
             }`}
-            style={{ width: "100%", maxWidth: "20rem" }}
           >
-            <ul className="flex flex-col items-center space-y-4 whitespace-nowrap text-xl text-primary  md:flex-row md:space-x-6 md:space-y-0">
+            <ul className="flex flex-col items-center gap-8 space-y-8 whitespace-nowrap text-xl text-primary  md:flex-row md:space-x-8 md:space-y-0">
               {navLinks.map((link) => (
                 <li key={link.route}>
                   <Link
@@ -100,7 +103,7 @@ export default function Navbar() {
           </div>
         </div>
         {settings.themeToggleEnabled && (
-          <div className=" hidden w-1/3 justify-end md:flex">
+          <div className=" hidden justify-end md:flex">
             <ModeToggle />
           </div>
         )}
