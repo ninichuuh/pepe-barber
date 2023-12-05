@@ -13,6 +13,7 @@ export default function FeatureCards() {
     { length: featureCards.content.length },
     () => useAnimation()
   )
+
   const [cardsArray, setCardsArray] = useState(featureCards)
   function shuffleArray(array: Content[]) {
     for (let i = array.length - 1; i > 0; i--) {
