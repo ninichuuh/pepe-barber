@@ -1,14 +1,11 @@
-import "./globals.css"
-import { siteConfig } from "@/config/site"
-// import { Dosis } from "next/font/google"
-// import { Lato } from "next/font/google"
-import { Alexandria } from "next/font/google"
-import Navbar from "@/components/layout/navbar"
 import Footer from "@/components/layout/footer"
+import Navbar from "@/components/layout/navbar"
 import { ThemeProvider } from "@/components/theme-provider"
 import { settings } from "@/config/settings"
+import { siteConfig } from "@/config/site"
+import { Alexandria } from "next/font/google"
+import "./globals.css"
 
-// const dosis = Dosis({ subsets: ["latin"] })
 const amantic = Alexandria({ subsets: ["latin"], weight: "400" })
 
 export const metadata = {
@@ -46,18 +43,9 @@ export const metadata = {
     images: [`https://i.ibb.co/T0j16wy/Screenshot-1.png`],
     creator: "@ninouii",
   },
-  icons: [
-    {
-      src: "/public/icon-192.png",
-      sizes: "192x192",
-      type: "image/png",
-    },
-    {
-      src: "/public/icon-512.png",
-      sizes: "512x512",
-      type: "image/png",
-    },
-  ],
+  icons: {
+    icon: "/favicon.ico",
+  },
 }
 
 interface RootLayoutProps {
@@ -69,7 +57,7 @@ export default function RootLayout({ children }: RootLayoutProps) {
     <html lang="en" suppressHydrationWarning>
       <body
         font-display="swap"
-        className={`${amantic.className} flex min-h-screen flex-col bg-background text-primary`}
+        className={`${amantic.className} flex min-h-screen select-none flex-col bg-background text-primary`}
       >
         {settings.themeToggleEnabled ? (
           <ThemeProvider attribute="class" defaultTheme="system" enableSystem>

@@ -31,7 +31,8 @@
     --destructive: #ef4444;
     --destructive-foreground: #fcf9f8;
     --btn-bg: #e3b505;
-    --ring: #94a3b8;
+    --ring: #ffffff;
+    --hovernice: #e3b505;
 
     --radius: 0.5rem;
   }
@@ -58,16 +59,20 @@
     --secondary: #e3b505;
     --secondary-foreground: #30d5c7;
 
-    --accent: #ffffff;
+    --accent: #003e1f;
     --accent-foreground: #ffffff;
 
     --destructive: red;
     --destructive-foreground: #787878;
 
-    --ring: #ffffff;
+    --ring: #003e1f;
 
     --radius: 0.5rem;
   }
+}
+.horizontal-line {
+  border-image: linear-gradient(to right, #49393b, #e3b505, #507255);
+  border-image-slice: 1;
 }
 .progress-bar {
   position: relative;
@@ -75,8 +80,36 @@
   left: 0;
   right: 0;
   height: 10px;
+
+  border-top-right-radius: 1000px;
+  border-bottom-right-radius: 1000px;
   background: linear-gradient(to right, #e3b505, #507255, #49393b);
   transform-origin: 0%;
+}
+body::-webkit-scrollbar {
+  width: 12px;
+  background: linear-gradient(to bottom, #e3b505, #507255, #49393b);
+  border-radius: 6px;
+  /* Adjust the width as needed */
+}
+
+/* Handle */
+body::-webkit-scrollbar-thumb {
+  background-color: #e3b505; /* Color of the scrollbar handle */
+  border-radius: 6px; /* Rounded corners */
+}
+
+/* Handle on hover */
+body::-webkit-scrollbar-thumb:hover {
+  background-color: #507255; /* Hover color */
+}
+body.dark::-webkit-scrollbar-thumb {
+  background-color: #e3b505; /* Adjust the color for the dark theme handle */
+}
+
+/* Handle on hover */
+body.dark::-webkit-scrollbar-thumb:hover {
+  background-color: #507255; /* Adjust the hover color for the dark theme handle */
 }
 
 @layer base {

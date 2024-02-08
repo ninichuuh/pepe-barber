@@ -79,18 +79,27 @@ export default function FeatureCards() {
   }
 
   return (
-    <section className="bg-slate-50 dark:bg-black" id="usluge" ref={ref}>
-      <div className="container space-y-8 py-12 text-center lg:py-20">
+    <section
+      className="flex min-h-[100dvh] w-full flex-col items-center justify-center space-y-8 bg-slate-50 py-12 dark:bg-black lg:py-12"
+      id="usluge"
+      ref={ref}
+    >
+      <div className="flex w-full flex-col items-center justify-center gap-12 p-4 text-center lg:max-w-[60dvw]">
         {cardsArray.header || cardsArray.subheader ? (
-          <div className="space-y-2">
+          <div className="w-min space-y-2 pb-3">
             <motion.h1
               className="text-4xl font-bold lg:text-6xl"
               variants={headerVariants}
               initial="hidden"
+              whileHover={{ color: "var(--hovernice)" }}
               animate={isInView ? "visible" : "hidden"}
             >
               {cardsArray.header.split("").map((letter, index) => (
-                <motion.span key={index} variants={letterVariants}>
+                <motion.span
+                  key={index}
+                  whileHover={{ color: "var(--hovernice)" }}
+                  variants={letterVariants}
+                >
                   {letter}
                 </motion.span>
               ))}

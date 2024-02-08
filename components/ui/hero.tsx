@@ -1,11 +1,10 @@
 "use client"
-import Link from "next/link"
-import Image from "next/image"
-import { motion, useInView } from "framer-motion"
 import { heroHeader } from "@/config/contents"
+import { motion, useInView } from "framer-motion"
+import Image from "next/image"
 import { useRef } from "react"
-import AnimatedSVG from "../ui/animatedSVG"
 import phoneSVG from "../../public/phone.svg"
+import AnimatedSVG from "./animatedSVG"
 
 export default function HeroHeader() {
   const ref = useRef(null)
@@ -32,7 +31,6 @@ export default function HeroHeader() {
       opacity: 1,
       scale: 1,
       transition: {
-        delay: 0.5,
         duration: 1, // Delay the image animation to start after the text animation
       },
     },
@@ -45,47 +43,56 @@ export default function HeroHeader() {
       <div className="flex flex-col items-center justify-center gap-4 overflow-visible text-center md:flex-1 lg:gap-8">
         <div className="space-y-4">
           <motion.h1
-            className="text-4xl font-bold lg:text-6xl"
+            className="text-4xl  font-bold text-['var(hovernice)'] lg:text-6xl"
             variants={headerVariants}
             initial="hidden"
+            whileHover={{ color: "var(--hovernice)" }}
             animate={isInView ? "visible" : "hidden"}
           >
             {heroHeader.header.split("").map((letter, index) => (
-              <motion.span key={index} variants={letterVariants}>
+              <motion.span
+                key={index}
+                whileHover={{ color: "var(--hovernice)" }}
+                variants={letterVariants}
+              >
                 {letter}
               </motion.span>
             ))}
           </motion.h1>
           <motion.h2
-            className="text-xl font-light lg:text-3xl"
+            className=" text-xl font-light lg:text-3xl"
             variants={headerVariants}
             initial="hidden"
+            whileHover={{ color: "var(--hovernice)" }}
             animate={isInView ? "visible" : "hidden"}
           >
             {heroHeader.subheader.split("").map((letter, index) => (
-              <motion.span key={index} variants={letterVariants}>
+              <motion.span
+                key={index}
+                whileHover={{ color: "var(--hovernice)" }}
+                variants={letterVariants}
+              >
                 {letter}
               </motion.span>
             ))}
           </motion.h2>
         </div>
-        <Link
+        <a
           href="tel:+385911583584"
           target="_blank"
           className={
-            "flex flex-row flex-nowrap gap-2 rounded border border-popover-foreground bg-primary px-4 py-2 font-bold text-white hover:bg-green-900 dark:border-yellow-600 dark:bg-btnbg dark:text-[#693434] dark:hover:bg-yellow-600"
+            "flex flex-row flex-nowrap gap-2 rounded border bg-hovernice px-4 py-2 font-normal text-[#695C5C] text-white shadow-[#695C5C] hover:border-[#695C5C] dark:border-none  dark:text-[#693434] dark:hover:bg-yellow-600"
           }
         >
           <Image
-            style={{ width: "20px", height: "auto" }}
             priority={true}
-            width={0}
-            height={0}
+            width={20}
+            height={20}
             src={phoneSVG}
             alt={"blabla"}
           />
           <span> Rezervirajte termin</span>
-        </Link>
+        </a>
       </div>
 
       <div className=" flex h-full w-full flex-1 justify-center overflow-visible md:max-h-[65dvh]">

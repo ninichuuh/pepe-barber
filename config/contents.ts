@@ -34,7 +34,7 @@ export const featureCards: ContentSection = {
       image: `/facefade.svg`,
     },
     {
-      text: `Šišanje Sa Škarama`,
+      text: `Šišanje Škarama`,
       subtext: `20€`,
       image: `/scissors.svg`,
     },
@@ -53,7 +53,7 @@ export const featureCards: ContentSection = {
 
 export const features: ContentSection = {
   header: `O nama`,
-  subheader: `Upoznajte Rokia i Pepeta`,
+  subheader: `Upoznajte Rokia i Piera`,
   image: `/naslovna.webp`,
   content: [
     {
@@ -63,7 +63,7 @@ export const features: ContentSection = {
     },
     {
       text: `Znanje i Vještine`,
-      subtext: `Znanje i vještine koje su bile potrebne da bi ovaj projekt postao stvarnost, prikupljana su u protekle tri godine. Posebno značajno iskustvo bilo je obrazovanje u Rotterdamu, u Schorem School of Barbering, gdje su naučene tehnike šišanja koje su duboko utjecale na mene.`,
+      subtext: `Znanje i vještine potrebne da bi ovaj projekt postao stvarnost prikupljane su kroz protekle tri godine na različitim edukacijama i radnim mjestima. Kao posebno značajno iskustvo ističe se obrazovanje u Rotterdamu, Schorem Scool of Barbering, gdje su se učile različite tehnike šišanja.`,
       image: `/diploma.svg`,
     },
     {

@@ -1,8 +1,8 @@
 "use client"
-import Hero from "@/components/pages/hero"
-import FeatureCards from "@/components/pages/feature-cards"
-import Features from "@/components/pages/features"
-import Contact from "@/components/pages/contact"
+import Contact from "@/components/ui/contact"
+import FeatureCards from "@/components/ui/feature-cards"
+import Features from "@/components/ui/features"
+import Hero from "@/components/ui/hero"
 
 export default function Home() {
   return (

@@ -3,7 +3,7 @@
     RewriteEngine On
     RewriteCond %{HTTPS} off
     RewriteCond %{REQUEST_URI} ^.$
-    RewriteRule ^(.*)$ https://"auto-auron.hr"/ [NC,L,R=301]
+    RewriteRule ^(.*)$ https://barbapepe.hr/ [NC,L,R=301]
 
     RewriteCond %{REQUEST_FILENAME} !-f
     RewriteCond %{REQUEST_FILENAME} !-d

@@ -1,19 +1,22 @@
-import Link from "next/link"
-import { siteConfig } from "@/config/site"
 import { navLinks } from "@/lib/links"
 import Image from "next/image"
 export default function Footer() {
   return (
     <footer className="mt-auto">
       <div className="mx-auto w-full max-w-screen-xl p-6 md:py-8">
-        <div className="flex flex-wrap items-center justify-between">
-          <Link href="/" className="w-1/3">
-            <h1 className="mb-2 text-2xl font-bold sm:mb-0">
-              {siteConfig.name}
-            </h1>
-          </Link>
+        <div className="flex flex-wrap items-center justify-center gap-4 md:justify-between md:gap-0">
+          <a href="/" className=" hidden  w-1/3 md:block">
+            <Image
+              priority={true}
+              src="/logo3.svg"
+              alt="logo"
+              width={65}
+              height={47}
+              className="hover:scale-110 dark:brightness-0 dark:invert-[1] "
+            />
+          </a>
           <div className="flex w-1/3 flex-row justify-center gap-4">
-            <Link
+            <a
               target="_blank"
               href="https://www.instagram.com/_pepesbarbershop_/"
             >
@@ -22,42 +25,42 @@ export default function Footer() {
                 alt="instagram"
                 width={32}
                 height={32}
-                className="dark:brightness-0 dark:invert-[1]"
+                className=" dark:brightness-0 dark:invert-[1]"
               />
-            </Link>
-            <Link
-              target="_blank"
-              href="https://maps.app.goo.gl/BGBAPx1NiFxttQ5c9"
-            >
+            </a>
+            <a target="_blank" href="https://maps.app.goo.gl/BGBAPx1NiFxttQ5c9">
               <Image
                 src="/googlemaps.svg"
                 alt="googlemaps"
                 width={32}
                 height={32}
               />
-            </Link>
+            </a>
           </div>
           <ul className="mb-6 flex flex-nowrap items-center whitespace-nowrap text-primary  sm:mb-0 sm:w-1/3">
             {navLinks.map((link) => (
               <li key={link.route}>
-                <Link href={link.path} className="mr-4 hover:underline md:mr-6">
+                <a
+                  href={link.path}
+                  className="mr-4 underline-offset-2 hover:text-hovernice hover:underline md:mr-6"
+                >
                   {link.route}
-                </Link>
+                </a>
               </li>
             ))}
           </ul>
         </div>
-        <hr className="my-6 text-muted-foreground sm:mx-auto lg:my-8" />
-        <span className="block text-sm text-muted-foreground dark:text-white sm:text-center">
+        <hr className="horizontal-line my-6 sm:mx-auto lg:my-8" />
+        <span className="flex items-center justify-center  text-sm text-muted-foreground dark:text-white sm:text-center">
           © {new Date().getFullYear()}{" "}
           <a
             target="_blank"
             href="https://github.com/ninichuuh"
             className="hover:underline"
           >
-            ninouii
+            . ninichuh
           </a>
-          . Sva Prava Pridžana.
+          . Sva Prava Pridržana.
         </span>
       </div>
     </footer>

@@ -51,6 +51,10 @@ module.exports = {
           DEFAULT: "var(--card)",
           foreground: "var(--card-foreground)",
         },
+        hovernice: {
+          DEFAULT: "var(--hovernice)",
+          foreground: "var(--hovernice)",
+        },
       },
       borderRadius: {
         lg: "var(--radius)",

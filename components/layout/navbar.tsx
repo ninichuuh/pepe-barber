@@ -1,12 +1,10 @@
 "use client"
-
 import { ModeToggle } from "@/components/mode-toggle"
-import { navLinks } from "@/lib/links"
-import Link from "next/link"
-import { useEffect, useState } from "react"
-import Image from "next/image"
 import { settings } from "@/config/settings"
+import { navLinks } from "@/lib/links"
 import { motion, useScroll, useSpring } from "framer-motion"
+import Image from "next/image"
+import { useEffect, useState } from "react"
 export default function Navbar() {
   const [navbar, setNavbar] = useState(false)
   const { scrollYProgress } = useScroll()
@@ -32,18 +30,19 @@ export default function Navbar() {
       <nav className="w-full justify-around px-4 md:flex md:items-center md:px-4 ">
         <div className="pb-1">
           <div className="flex items-center justify-between p-1  md:block ">
-            <Link href="/" onClick={handleClick}>
+            <a href="/" onClick={handleClick}>
               <Image
-                src="/logo2.svg"
+                priority={true}
+                src="/logo3.svg"
                 alt="logo"
-                width={64}
-                height={64}
-                className="dark:brightness-0 dark:invert-[1]"
+                width={65}
+                height={47}
+                className="flex hover:scale-110 dark:brightness-0 dark:invert-[1]"
               />
-            </Link>
+            </a>
             <div className="flex gap-1 md:hidden">
               <button
-                className="rounded-md p-2 text-primary outline-none focus:border focus:border-primary"
+                className="rounded-md p-2 text-primary  outline-none "
                 aria-label="Hamburger Menu"
                 onClick={() => setNavbar(!navbar)}
               >
@@ -90,25 +89,25 @@ export default function Navbar() {
             <ul className="flex flex-col items-center gap-8 space-y-8 whitespace-nowrap text-xl text-primary  md:flex-row md:space-x-8 md:space-y-0">
               {navLinks.map((link) => (
                 <li key={link.route}>
-                  <Link
-                    className="hover:underline"
+                  <a
+                    className="underline-offset-4 hover:text-hovernice hover:underline  "
                     href={link.path}
                     onClick={handleClick}
                   >
                     {link.route}
-                  </Link>
+                  </a>
                 </li>
               ))}
             </ul>
           </div>
         </div>
         {settings.themeToggleEnabled && (
-          <div className=" hidden justify-end md:flex">
+          <div className="hidden justify-end rounded md:flex">
             <ModeToggle />
           </div>
         )}
       </nav>
-      <motion.div className="progress-bar" style={{ scaleX }} />
+      <motion.div className="progress-bar " style={{ scaleX }} />
     </header>
   )
 }
