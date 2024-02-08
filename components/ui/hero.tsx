@@ -81,7 +81,7 @@ export default function HeroHeader() {
           href="tel:+385911583584"
           target="_blank"
           className={
-            "flex flex-row flex-nowrap gap-2 rounded border bg-hovernice px-4 py-2 font-normal text-[#695C5C] text-white shadow-[#695C5C] hover:border-[#695C5C] dark:border-none  dark:text-[#693434] dark:hover:bg-yellow-600"
+            "flex flex-row flex-nowrap gap-2 rounded border bg-hovernice px-4 py-2 font-normal text-[#695C5C] shadow-[#695C5C] hover:border-[#695C5C] dark:border-none  dark:text-[#693434] dark:hover:bg-yellow-600"
           }
         >
           <Image
