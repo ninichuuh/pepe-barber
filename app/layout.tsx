@@ -5,7 +5,7 @@ import { settings } from "@/config/settings"
 import { siteConfig } from "@/config/site"
 import { Alexandria } from "next/font/google"
 import "./globals.css"
-
+import { GoogleAnalytics } from '@next/third-parties/google'
 const amantic = Alexandria({ subsets: ["latin"], weight: "400" })
 
 export const metadata = {
@@ -73,6 +73,7 @@ export default function RootLayout({ children }: RootLayoutProps) {
           </ThemeProvider>
         )}
       </body>
+      <GoogleAnalytics gaId="G-4KK9F7WKW5" />
     </html>
   )
 }
