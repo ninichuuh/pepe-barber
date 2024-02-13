@@ -1,5 +1,6 @@
 "use client"
 import { heroHeader } from "@/config/contents"
+import { sendGTMEvent } from "@next/third-parties/google"
 import { motion, useInView } from "framer-motion"
 import Image from "next/image"
 import { useRef } from "react"
@@ -80,6 +81,7 @@ export default function HeroHeader() {
         <a
           href="tel:+385911583584"
           target="_blank"
+          onClick={() => sendGTMEvent({ event: "buttonClicked", value: "Hero button" })}
           className={
             "flex flex-row flex-nowrap gap-2 rounded border bg-hovernice px-4 py-2 font-normal text-[#695C5C] shadow-[#695C5C] hover:border-[#695C5C] dark:border-none  dark:text-[#693434] dark:hover:bg-yellow-600"
           }

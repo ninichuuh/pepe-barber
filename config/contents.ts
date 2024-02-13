@@ -63,12 +63,12 @@ export const features: ContentSection = {
     },
     {
       text: `Znanje i Vještine`,
-      subtext: `Znanje i vještine potrebne da bi ovaj projekt postao stvarnost prikupljane su kroz protekle tri godine na različitim edukacijama i radnim mjestima. Kao posebno značajno iskustvo ističe se obrazovanje u Rotterdamu, Schorem Scool of Barbering, gdje su se učile različite tehnike šišanja.`,
+      subtext: `Znanje i vještine potrebne da bi ovaj projekt postao stvarnost prikupljane su kroz protekle tri godine na različitim edukacijama i radnim mjestima. Kao posebno značajno iskustvo ističe se obrazovanje u Rotterdamu, <a href="https://schorembarbier.nl/" target="_blank">Schorem School of Barbering</a>, gdje su se učile različite tehnike šišanja.`,
       image: `/diploma.svg`,
     },
     {
-      text: `Suradnja S Azilom`,
-      subtext: `Unutar našeg barbershopa s ponosom ističemo oglasnu ploču koja prikazuje fotografije i informacije o raznim psima u potrazi za toplim, ljubavlju ispunjenim domovima. Odabirom udomljavanja, "Pepe's Barbershop" vas nagrađuje posebnim iznenađenjem-besplatnim tretmanom koji uključuje šišanje i pranje kose, dotjerivanje brade te osvježavajući tretman lica.`,
+      text: `Suradnja S Azilom(https://zz-rijeka.org/o-nama/)`,
+      subtext: `Unutar našeg barbershopa s ponosom ističemo oglasnu ploču koja prikazuje fotografije i informacije o raznim psima u potrazi za toplim, ljubavlju ispunjenim domovima. Odabirom udomljavanja, "Pepe's Barbershop" vas nagrađuje posebnim iznenađenjem-besplatnim tretmanom koji uključuje šišanje i pranje kose, dotjerivanje brade te osvježavajući tretman lica. Više informacija o suradnji s Azilom možete pronaći na njihovoj službenoj stranici <a href="https://zz-rijeka.org/o-nama/" target="_blank">Azila</a>.`,
       image: `/pet-house.svg`,
     },
   ],

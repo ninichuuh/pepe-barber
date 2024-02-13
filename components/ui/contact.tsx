@@ -1,5 +1,6 @@
 "use client"
 import HeadingText from "@/components/heading-text"
+import { sendGTMEvent } from "@next/third-parties/google"
 import Image from "next/image"
 import phoneSVG from "../../public/phone.svg"
 export const metadata = {
@@ -20,6 +21,12 @@ export default function Contact() {
             <a
               href="https://www.instagram.com/_pepesbarbershop_/"
               target="_blank"
+              onClick={() =>
+                sendGTMEvent({
+                  event: "buttonClicked",
+                  value: "Contact instagram",
+                })
+              }
               className={
                 "flex max-w-[250px] flex-row flex-nowrap items-center gap-2  rounded border border-popover-foreground bg-primary px-4 py-2 font-normal text-white hover:bg-green-900 hover:shadow-xl hover:shadow-[var(--hovernice)] dark:border-yellow-600 dark:bg-btnbg dark:text-[#693434] dark:hover:bg-yellow-600"
               }
@@ -37,6 +44,12 @@ export default function Contact() {
             <a
               href="tel:+385911583584"
               target="_blank"
+              onClick={() =>
+                sendGTMEvent({
+                  event: "buttonClicked",
+                  value: "Contact telefon",
+                })
+              }
               className={
                 "flex max-w-[200px] flex-row flex-nowrap items-center  gap-2 rounded border border-popover-foreground bg-primary px-4 py-2 font-normal text-white hover:bg-green-900 hover:shadow-xl hover:shadow-[var(--hovernice)] dark:border-yellow-600 dark:bg-btnbg dark:text-[#693434] dark:hover:bg-yellow-600"
               }
