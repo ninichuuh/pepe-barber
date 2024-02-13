@@ -5,8 +5,8 @@ import { settings } from "@/config/settings"
 import { siteConfig } from "@/config/site"
 import { Alexandria } from "next/font/google"
 import "./globals.css"
-import { GoogleAnalytics } from '@next/third-parties/google'
-import { GoogleTagManager } from '@next/third-parties/google'
+import { GoogleAnalytics } from "@next/third-parties/google"
+import { GoogleTagManager } from "@next/third-parties/google"
 const amantic = Alexandria({ subsets: ["latin"], weight: "400" })
 
 export const metadata = {
