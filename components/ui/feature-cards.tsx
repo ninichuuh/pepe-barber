@@ -166,8 +166,36 @@ export default function FeatureCards() {
                   transition={{ delay: 0.5 * index, duration: 1 }}
                   className="space-y-2"
                 >
-                  <CardTitle>{cards.text}</CardTitle>
-                  <CardDescription>{cards.subtext}</CardDescription>
+                  <CardTitle>
+                    {index === 2 ? (
+                      <>
+                        Suradnja s{" "}
+                        <a href="https://zz-rijeka.org/o-nama/">azilom</a>
+                      </>
+                    ) : (
+                      cards.text
+                    )}
+                  </CardTitle>
+                  <CardDescription>
+                    {index === 1 ? (
+                      <>
+                        Znanje i vještine potrebne da bi ovaj projekt postao
+                        stvarnost prikupljane su kroz protekle tri godine na
+                        različitim edukacijama i radnim mjestima. Kao posebno
+                        značajno iskustvo ističe se obrazovanje u Rotterdamu,
+                        <a
+                          href="https://schorembarbier.nl/"
+                          target="_blank"
+                          rel="noopener noreferrer"
+                        >
+                          Schorem School of Barbering
+                        </a>
+                        gdje su se učile različite tehnike šišanja.
+                      </>
+                    ) : (
+                      cards.subtext
+                    )}
+                  </CardDescription>
                 </motion.div>
               </Card>
             </motion.div>

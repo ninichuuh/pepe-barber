@@ -67,7 +67,7 @@ export const features: ContentSection = {
       image: `/diploma.svg`,
     },
     {
-      text: `Suradnja S Azilom(https://zz-rijeka.org/o-nama/)`,
+      text: `Suradnja S Azilom`,
       subtext: `Unutar našeg barbershopa s ponosom ističemo oglasnu ploču koja prikazuje fotografije i informacije o raznim psima u potrazi za toplim, ljubavlju ispunjenim domovima. Odabirom udomljavanja, "Pepe's Barbershop" vas nagrađuje posebnim iznenađenjem-besplatnim tretmanom koji uključuje šišanje i pranje kose, dotjerivanje brade te osvježavajući tretman lica. Više informacija o suradnji s Azilom možete pronaći na njihovoj službenoj stranici <a href="https://zz-rijeka.org/o-nama/" target="_blank">Azila</a>.`,
       image: `/pet-house.svg`,
     },
